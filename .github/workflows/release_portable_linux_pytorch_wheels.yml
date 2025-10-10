@@ -13,17 +13,27 @@ on:
           - gfx950-dcgpu
         default: gfx94X-dcgpu
       release_type:
-        description: The type of release to build ("nightly", or "dev")
-        type: string
-        default: "dev"
+        description: The type of release to build ("nightly", "prerelease", or "dev")
+        type: choice
+        options:
+          - dev
+          - nightly
+          - prerelease
+        default: dev
       s3_subdir:
         description: S3 subdirectory, not including the GPU-family
-        type: string
-        default: "v2"
+        type: choice
+        options:
+          - v2
+          - v3/whl
+        default: v2
       s3_staging_subdir:
         description: "Staging subdirectory to push the wheels for test"
-        type: string
-        default: "v2-staging"
+        type: choice
+        options:
+          - v2-staging
+          - v3/whl-staging
+        default: v2-staging
       cloudfront_url:
         description: CloudFront URL pointing to Python index
         type: choice

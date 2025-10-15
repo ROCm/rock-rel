@@ -69,10 +69,10 @@ jobs:
       fail-fast: false
       matrix:
         python_version: ["3.11", "3.12", 3.13]
-        pytorch_version: ["release/2.7", "release/2.9"]
+        pytorch_version: ["release/2.9"]
         include:
-          - pytorch_version: release/2.7
-            pytorch_patchset: "rocm_2.7"
+          # - pytorch_version: release/2.7
+          #   pytorch_patchset: "rocm_2.7"
           - pytorch_version: release/2.9
             pytorch_patchset: rocm_2.9
           # - pytorch_version: nightly

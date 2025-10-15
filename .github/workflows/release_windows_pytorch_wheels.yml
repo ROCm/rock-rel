@@ -68,15 +68,15 @@ jobs:
       matrix:
         python_version: ["3.11", "3.12", "3.13"]
         # pytorch_version: ["release/2.7", "release/2.9", "nightly"]
-        pytorch_version: ["main"]
+        pytorch_version: ["release/2.9"]
         include:
           # - pytorch_version: release/2.7
           #   pytorch_patchset: "rocm_2.7"
-          # - pytorch_version: release/2.9
-          #   pytorch_patchset: rocm_2.9
+          - pytorch_version: release/2.9
+            pytorch_patchset: rocm_2.9
           # - pytorch_version: nightly
-          - pytorch_version: main
-            pytorch_patchset: "main"
+          # - pytorch_version: main
+          #   pytorch_patchset: "main"
 
     uses: ROCm/TheRock/.github/workflows/build_windows_pytorch_wheels.yml@users/marbre/therock-releases
     with:

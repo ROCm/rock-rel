@@ -5,9 +5,9 @@ This repository contains code and actions workflow runs for stable [TheRock](htt
 ROCm release type | Repository where workflows run | Process notes
 -- | -- | --
 Stable releases  | [rockrel](https://github.com/ROCm/rockrel) (_This repository_) | 🟢 Manual promotion, exhaustive QA
-Stable prereleases | [rockrel](https://github.com/ROCm/rockrel) (_This repository_) | 🔵 Manual branching, automated testing
-Nightly releases | [TheRock](https://github.com/ROCm/TheRock) | 🔵 Sampled from latest sources, automated testing
-Per-commit development builds | [TheRock](https://github.com/ROCm/TheRock), [rocm-libraries](https://github.com/ROCm/rocm-libraries), [rocm-systems](https://github.com/ROCm/rocm-systems), etc. | 🟠 Limited automated testing
+Stable prereleases | [rockrel](https://github.com/ROCm/rockrel) (_This repository_) | 🔵 Manual branching, automated tests
+Nightly releases | [TheRock](https://github.com/ROCm/TheRock) | 🔵 Nightly snapshots, automated tests
+Per-commit builds | [TheRock](https://github.com/ROCm/TheRock), [rocm-libraries](https://github.com/ROCm/rocm-libraries), [rocm-systems](https://github.com/ROCm/rocm-systems) | 🟠 Development builds, automated tests
 
 _The name of this repo has been shortened to workaround this [known Windows path length issue](https://github.com/ROCm/rocm-libraries/issues/2096)._
 

@@ -78,7 +78,7 @@ jobs:
           # - pytorch_version: nightly
           #  pytorch_patchset: "nightly"
 
-    uses: ROCm/TheRock/.github/workflows/build_portable_linux_pytorch_wheels.yml@users/marbre/therock-releases
+    uses: ROCm/TheRock/.github/workflows/build_portable_linux_pytorch_wheels.yml@main
     with:
       amdgpu_family: ${{ inputs.amdgpu_family }}
       python_version: ${{ matrix.python_version }}

@@ -78,7 +78,7 @@ jobs:
           # - pytorch_version: main
           #   pytorch_patchset: "main"
 
-    uses: ROCm/TheRock/.github/workflows/build_windows_pytorch_wheels.yml@users/marbre/therock-releases
+    uses: ROCm/TheRock/.github/workflows/build_windows_pytorch_wheels.yml@main
     with:
       amdgpu_family: ${{ inputs.amdgpu_family }}
       python_version: ${{ matrix.python_version }}

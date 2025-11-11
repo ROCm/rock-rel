@@ -6,9 +6,13 @@ on:
       amdgpu_family:
         type: choice
         options:
+          - gfx101X-dgpu
+          - gfx103X-dgpu
           - gfx110X-dgpu
+          - gfx1150
           - gfx1151
           - gfx120X-all
+          - gfx90X-dcgpu
         default: gfx1151
       release_type:
         description: The type of release to build ("nightly", "prerelease", or "dev")
@@ -67,16 +71,12 @@ jobs:
       fail-fast: false
       matrix:
         python_version: ["3.11", "3.12", "3.13"]
-        # pytorch_version: ["release/2.7", "release/2.9", "nightly"]
-        pytorch_version: ["release/2.9"]
+        pytorch_version: ["release/2.9", "nightly"]
         include:
-          # - pytorch_version: release/2.7
-          #   pytorch_patchset: "rocm_2.7"
           - pytorch_version: release/2.9
             pytorch_patchset: rocm_2.9
-          # - pytorch_version: nightly
-          # - pytorch_version: main
-          #   pytorch_patchset: "main"
+          - pytorch_version: nightly
+            pytorch_patchset: nightly
 
     uses: ROCm/TheRock/.github/workflows/build_windows_pytorch_wheels.yml@main
     with:

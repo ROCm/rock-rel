@@ -40,18 +40,18 @@ on:
         description: CloudFront URL pointing to Python index
         type: choice
         options:
-          - https://d25kgig7rdsyks.cloudfront.net/v2
+          - https://rocm.devreleases.amd.com/v2
           - https://rocm.prereleases.amd.com/whl
           - https://rocm.nightlies.amd.com/v2
-        default: https://d25kgig7rdsyks.cloudfront.net/v2
+        default: https://rocm.devreleases.amd.com/v2
       cloudfront_staging_url:
         description: CloudFront base URL pointing to staging Python index
         type: choice
         options:
-          - https://d25kgig7rdsyks.cloudfront.net/v2-staging
+          - https://rocm.devreleases.amd.com/v2-staging
           - https://rocm.prereleases.amd.com/whl-staging
           - https://rocm.nightlies.amd.com/v2-staging
-        default: https://d25kgig7rdsyks.cloudfront.net/v2-staging
+        default: https://rocm.devreleases.amd.com/v2-staging
       rocm_version:
         description: ROCm version to pip install
         type: string

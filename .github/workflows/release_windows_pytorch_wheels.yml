@@ -71,12 +71,10 @@ jobs:
       fail-fast: false
       matrix:
         python_version: ["3.11", "3.12", "3.13"]
-        pytorch_version: ["release/2.9", "nightly"]
+        pytorch_version: ["release/2.9"]
         include:
           - pytorch_version: release/2.9
             pytorch_patchset: rocm_2.9
-          - pytorch_version: nightly
-            pytorch_patchset: nightly
 
     uses: ROCm/TheRock/.github/workflows/build_windows_pytorch_wheels.yml@release/therock-7.10
     with:

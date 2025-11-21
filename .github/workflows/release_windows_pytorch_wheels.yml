@@ -58,6 +58,7 @@ on:
       ref:
         description: "Branch, tag or SHA to checkout. Otherwise, uses the default branch."
         type: string
+        default: release/therock-7.10
 
 
 permissions:

@@ -82,7 +82,7 @@ jobs:
           - pytorch_version: release/2.9
             pytorch_patchset: rocm_2.9
 
-    uses: ROCm/TheRock/.github/workflows/build_portable_linux_pytorch_wheels.yml@release/therock-7.10
+    uses: ROCm/TheRock/.github/workflows/build_portable_linux_pytorch_wheels.yml@users/lpromber/7.10-correct-checkout
     with:
       amdgpu_family: ${{ inputs.amdgpu_family }}
       python_version: ${{ matrix.python_version }}
